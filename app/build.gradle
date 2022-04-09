@@ -56,4 +56,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth'
     //Google error 9 fix
     implementation 'com.google.android.gms:play-services-location:18.0.0'
+
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //Scalable DP and SP
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
 }

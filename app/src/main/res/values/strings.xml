@@ -10,6 +10,38 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
 
+    <!-- Login page -->
+    <string name="password_input">Password: </string>
+    <string name="username_input">Username: </string>
+    <string name="loginButton">Login</string>
+    <string name="register">Register</string>
+    <string name="forgotPassword">Forgot Password</string>
+
+    <!-- RegisterUser page -->
+    <string name="firstNameInput">First Name</string>
+    <string name="lastNameInput">Last Name</string>
+    <string name="emailInput">Email</string>
+    <string name="campusInput">Campus</string>
+    <string name="passwordInput">Password</string>
+    <string name="submitButton">Submit</string>
+
+    <!-- Payment page -->
+    <string name="checkout_header">Checkout</string>
+    <string name="items">Items:</string>
+    <string name="name_column_header">Name</string>
+    <string name="unit_column_header">Unit</string>
+    <string name="price_column_header">Price</string>
+    <string name="total">Total:</string>
+    <string name="payment_header">Payment</string>
+    <string name="mastercard_visa">MasterCard/Visa</string>
+    <string name="paylah">DBS PayLah!</string>
+    <string name="paynow">Paynow</string>
+    <string name="choose_payment">Select a payment method.</string>
+
+    <!-- Confirmation page -->
+    <string name="successful_header">Payment Successful</string>
+    <string name="done">Done</string>
+
     <string name="about_you">About you</string>
     <string name="first_name">First Name</string>
     <string name="hfirst_name">Enter first name</string>
@@ -27,5 +59,44 @@
         <item>NUS</item>
         <item>SMU</item>
         <item>SUSS</item>
+    </string-array>
+
+
+    <!-- Store Page -->
+    <string name="sutd_canteen_store">SUTD Canteen Store</string>
+    <string name="sutd_canteen_1">Indian Stall</string>
+    <string name="sutd_canteen_2">Western Stall</string>
+    <string name="sutd_canteen_3">Japanese Stall</string>
+    <string name="sutd_canteen_4">Healthy Soup Stall</string>
+    <string name="dummy_stall_1">Dummy Stall 1</string>
+    <string name="indian_stall_image">Indian Stall</string>
+    <string name="western_stall_image">Western Stall</string>
+    <string name="japanese_stall_image">Japanese Stall</string>
+    <string name="healthy_soup_image">Healthy Soup Stall</string>
+    <string name="dummy_stall_1_image">Dummy1</string>
+
+    <!-- Food Display Page -->
+    <string-array name="food_names">
+        <item>foodname1</item>
+        <item>foodname2</item>
+        <item>foodname3</item>
+        <item>foodname4</item>
+
+
+    </string-array>
+    <string-array name="food_prices">
+        <item>foodprice1</item>
+        <item>foodprice2</item>
+        <item>foodprice3</item>
+        <item>foodprice4</item>
+
+    </string-array>
+    <!-- Food Detail Page -->
+    <string-array name="food_options">
+        <item>More Chilly</item>
+        <item>Less Chilly</item>
+        <item>More Soup</item>
+        <item>Less Soup</item>
+
     </string-array>
 </resources>
