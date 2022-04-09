@@ -48,8 +48,8 @@ public class AboutActivity extends AppCompatActivity {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 Log.i("TAG",documentSnapshot.toString() );
                 if (documentSnapshot.exists()){
-//                    String email = documentSnapshot.getString(EMAIL);
-//                    String campus = documentSnapshot.getString(CAMPUS);
+//                  String email = documentSnapshot.getString(EMAIL);
+//                  String campus = documentSnapshot.getString(CAMPUS);
                     String first_name = documentSnapshot.getString(FIRST_NAME);
                     String last_name = documentSnapshot.getString(LAST_NAME);
                     editFirstName.setText(first_name);
@@ -78,7 +78,7 @@ public class AboutActivity extends AppCompatActivity {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-//                        openNextPage();
+//                      openNextPage();
                         String firstName = editFirstName.getText().toString();
                         String lastName = editLastName.getText().toString();
                     }
