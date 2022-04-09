@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -31,7 +33,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_user);
+        setContentView(R.layout.activity_modified_register);
         mAuth = FirebaseAuth.getInstance();
 
         this.editFirstName = findViewById(R.id.editfirst_name);
@@ -42,6 +44,12 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
 
         Button submit_button = findViewById(R.id.submit_button);
         submit_button.setOnClickListener(this);
+
+        String[] universities = getResources().getStringArray(R.array.university_array);
+
+        AutoCompleteTextView editText = findViewById(R.id.autoCompleteTextViewUniversityName);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.dropdown, R.id.editTextUniversityName, universities);
+        editText.setAdapter(adapter);
 
     }
 
@@ -95,6 +103,7 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
             editPassword.requestFocus();
             return;
         }
+
 
         mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override

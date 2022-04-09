@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_modified_main);
         mAuth = FirebaseAuth.getInstance();
 
         this.email = findViewById(R.id.editemail);
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void registerText(){
-        Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+        Intent intent = new Intent(MainActivity.this, RegisterUser.class);
         startActivity(intent);
     }
 }

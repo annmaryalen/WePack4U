@@ -41,6 +41,12 @@ public class AboutActivity extends AppCompatActivity {
         //catch UID
         user = FirebaseAuth.getInstance().getCurrentUser();
 
+        String[] universities = getResources().getStringArray(R.array.university_array);
+
+        AutoCompleteTextView editText = findViewById(R.id.autoCompleteTextViewUniversityName);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.dropdown, R.id.editTextUniversityName, universities);
+        editText.setAdapter(adapter);
+
         Log.i("AboutActivity", "onCreate: " + user.getUid());
         db = FirebaseFirestore.getInstance();
         db.collection("users").document(user.getUid()).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
@@ -66,12 +72,6 @@ public class AboutActivity extends AppCompatActivity {
                 Log.d("TAG", "onFailure: " + e.toString());
             }
         });
-
-        String[] universities = getResources().getStringArray(R.array.university_array);
-
-        AutoCompleteTextView editText = findViewById(R.id.autoCompleteTextViewUniversityName);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.dropdown, R.id.editTextUniversityName, universities);
-        editText.setAdapter(adapter);
 
 
         submitButton.setOnClickListener(
