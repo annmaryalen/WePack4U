@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -22,12 +24,12 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class AboutActivity extends AppCompatActivity {
     FirebaseFirestore db;
     private FirebaseUser user;
-    private static final String EMAIL = "email";
-    private static final String CAMPUS = "campus";
     private static final String FIRST_NAME = "first_name";
     private static final String LAST_NAME = "last_name";
+    private String campus;
 
     EditText editFirstName,editLastName;
+    AutoCompleteTextView editText;
     Button submitButton;
 
     @Override
@@ -43,9 +45,20 @@ public class AboutActivity extends AppCompatActivity {
 
         String[] universities = getResources().getStringArray(R.array.university_array);
 
-        AutoCompleteTextView editText = findViewById(R.id.autoCompleteTextViewUniversityName);
+        this.editText = findViewById(R.id.autoCompleteTextViewUniversityName);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.dropdown, R.id.editTextUniversityName, universities);
         editText.setAdapter(adapter);
+
+        editText.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                System.out.println("here");
+                campus =adapterView.getItemAtPosition(position).toString();
+                System.out.println("campus"+campus);
+
+            }
+        });
+
 
         Log.i("AboutActivity", "onCreate: " + user.getUid());
         db = FirebaseFirestore.getInstance();
@@ -54,8 +67,6 @@ public class AboutActivity extends AppCompatActivity {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 Log.i("TAG",documentSnapshot.toString() );
                 if (documentSnapshot.exists()){
-//                  String email = documentSnapshot.getString(EMAIL);
-//                  String campus = documentSnapshot.getString(CAMPUS);
                     String first_name = documentSnapshot.getString(FIRST_NAME);
                     String last_name = documentSnapshot.getString(LAST_NAME);
                     editFirstName.setText(first_name);
@@ -81,9 +92,24 @@ public class AboutActivity extends AppCompatActivity {
 //                      openNextPage();
                         String firstName = editFirstName.getText().toString();
                         String lastName = editLastName.getText().toString();
+                        switch (view.getId()){
+                            case R.id.submitButton:
+                                validateInput();
+                                break;
+                        }
                     }
                 });
     }
 
+    public void validateInput(){
 
+        if(campus==null){
+            System.out.println("worked");
+            editText.setError("Campus is required");
+            editText.requestFocus();
+            return;
+        }
     }
+
+
+}
