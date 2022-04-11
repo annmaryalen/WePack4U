@@ -1,8 +1,12 @@
-package com.example.wepack4u;
+package com.example.wepack4u.utilities;
 
+import com.example.wepack4u.utilities.FoodItem;
+
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class TotalPrice {
+    private static final DecimalFormat df = new DecimalFormat("0.00");
     private final List<FoodItem> cart;
 
     public TotalPrice(List<FoodItem> cart) { this.cart = cart; }
@@ -12,7 +16,7 @@ public class TotalPrice {
 
         for (FoodItem f : cart) { subtotal = subtotal + f.getPriceValue(); }
 
-        String totalPrice = "$" + subtotal;
+        String totalPrice = "$" + df.format(subtotal);
         if (subtotal * 10 % 1 == 0) { totalPrice = totalPrice + "0"; }
         return totalPrice;
     }

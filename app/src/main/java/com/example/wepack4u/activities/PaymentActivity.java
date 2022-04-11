@@ -1,4 +1,4 @@
-package com.example.wepack4u;
+package com.example.wepack4u.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +15,10 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.wepack4u.adaptors.CartRecycler;
+import com.example.wepack4u.R;
+import com.example.wepack4u.utilities.TotalPrice;
+import com.example.wepack4u.utilities.FoodItem;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;

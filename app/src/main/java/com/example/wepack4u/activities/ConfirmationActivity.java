@@ -1,4 +1,4 @@
-package com.example.wepack4u;
+package com.example.wepack4u.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.wepack4u.adaptors.CartRecycler;
+import com.example.wepack4u.R;
+import com.example.wepack4u.StorePage;
+import com.example.wepack4u.utilities.TotalPrice;
+import com.example.wepack4u.utilities.FoodItem;
+import com.example.wepack4u.utilities.Timestamp;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -21,8 +27,6 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import kotlin.random.AbstractPlatformRandom;
 
 public class ConfirmationActivity extends AppCompatActivity {
     private final FirebaseFirestore db = FirebaseFirestore.getInstance();
