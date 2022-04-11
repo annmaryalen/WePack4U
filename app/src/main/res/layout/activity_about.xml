@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="20dp"
-    tools:context=".AboutActivity"
+    tools:context=".activities.AboutActivity"
     android:orientation="vertical">
 
     <TextView
@@ -109,8 +109,8 @@
 
     <Button
         android:id="@+id/submitButton"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
         android:layout_marginBottom="24dp"
         android:backgroundTint="#000000"
         android:fontFamily="@font/montserrat_bold"

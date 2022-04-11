@@ -13,11 +13,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_bold"
-        android:text="@string/register"
+        android:text="@string/about_you"
         android:textColor="#D5000000"
         android:textSize="36sp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -28,14 +28,15 @@
         android:textColor="#BC000000"
         android:textSize="12sp"
         android:layout_marginTop="15dp"
-        android:paddingLeft="2dp"
+        android:paddingLeft="4dp"
         app:layout_constraintStart_toStartOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1"/>
 
     <EditText
-        android:id="@+id/editfirst_name"
+        android:id="@+id/editTextFirstName"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
         android:autofillHints="no"
         android:fontFamily="@font/montserrat_medium"
         android:hint="@string/hfirst_name"
@@ -54,17 +55,19 @@
         android:textColor="#BC000000"
         android:textSize="12sp"
         android:layout_marginTop="10dp"
-        android:paddingLeft="2dp"
+        android:paddingLeft="4dp"
         app:layout_constraintStart_toStartOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/editfirst_name" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextFirstName" />
 
     <EditText
-        android:id="@+id/editlast_name"
+        android:id="@+id/editTextLastName"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
         android:autofillHints="no"
         android:fontFamily="@font/montserrat_medium"
         android:hint="@string/hlast_name"
+        android:imeOptions="actionDone"
         android:inputType="textPersonName"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,80 +78,26 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="@string/emailInput"
+        android:fontFamily="@font/montserrat_black"
+        android:text="@string/university"
         android:textColor="#BC000000"
-        android:textSize="12sp"
-        android:layout_marginTop="10dp"
-        android:paddingLeft="2dp"
-        app:layout_constraintStart_toStartOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/editlast_name" />
-
-    <EditText
-        android:id="@+id/editemail"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:autofillHints="no"
-        android:fontFamily="@font/montserrat_medium"
-        android:hint="@string/email"
-        android:inputType="textPersonName"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="@string/passwordInput"
-        android:textColor="#BC000000"
-        android:textSize="12sp"
-        android:layout_marginTop="10dp"
-        android:paddingLeft="2dp"
-        app:layout_constraintStart_toStartOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/editemail" />
-
-    <EditText
-        android:id="@+id/editpassword"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:autofillHints="no"
-        android:fontFamily="@font/montserrat_medium"
-        android:hint="@string/password"
-        android:inputType="textPassword"
-        android:textSize="12sp"
-        android:imeOptions="actionDone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="@string/huniversity"
-        android:textColor="#BC000000"
-        android:textSize="12sp"
+        android:textSize="15sp"
         android:paddingLeft="2dp"
         android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/editpassword" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLastName" />
 
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
         android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="@+id/textView1"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <AutoCompleteTextView
-            android:id="@+id/editcampus"
+            android:id="@+id/autoCompleteTextViewUniversityName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/montserrat_medium"
@@ -159,16 +108,25 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/submit_button"
+        android:id="@+id/submitButton"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_38sdp"
+        android:layout_marginBottom="85dp"
         android:backgroundTint="#000000"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/submit"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="#000000"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/logout"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
