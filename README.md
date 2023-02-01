@@ -1,7 +1,6 @@
 <h1>WePack4U</h1>
 
-[![Watch the video](https://github.com/annmaryalen/WePack4U/blob/main/WePack4U.mp4)
-
+https://user-images.githubusercontent.com/83853449/215983970-831880e6-e55b-48c6-a676-78cdc18e20d2.mp4
 
 <h2>BACKGROUND</h2>
 Our inspiration behind the WePack4U app stems from our common experience in the SUTD canteen where long queues and the lack of proper management of resources, especially during peak hours, leaves little to no time for students to be able to peacefully enjoy their meals, and results in the development of unhealthy eating habits as an quick and easy alternative.
